@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Sen", "Cabin Sketch", "Poppins", system-ui, sans-serif;
+    scroll-behavoir: smooth;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 text-white bg-purple-600 rounded-md;
+  }
+}
