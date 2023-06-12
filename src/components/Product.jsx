@@ -5,7 +5,7 @@ const Product = () => {
   return (
     <>
       <article className="p-3">
-        <div className="m-1 mx-auto flex max-w-[1500px] items-center justify-around gap-2 rounded-lg bg-gray-50 p-3 shadow-my_shadow md:justify-between md:px-3 ">
+        <div className="m-1 mx-auto flex max-w-[1400px] items-center justify-around gap-2 rounded-lg bg-gray-50 p-3 shadow-my_shadow md:justify-between md:px-5 ">
           <div className="flex items-center gap-5">
             <div className="w-32 h-32 rounded-lg ">
               <img
@@ -15,7 +15,9 @@ const Product = () => {
               />
             </div>
             <div className="flex flex-col gap-1 ">
-              <h1 className="text-base font-medium">Apple Watch Series 3</h1>
+              <h1 className="text-base font-medium text-rose-950">
+                Apple Watch Series 3
+              </h1>
               <p className="font-bold tracking-wider text-primary">Amount: 3</p>
               <p className="font-bold text-green-600 ">$350</p>
               <button className="self-start text-red-600">Remove</button>

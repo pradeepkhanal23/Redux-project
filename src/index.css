@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-family: "Sen", "Cabin Sketch", "Poppins", system-ui, sans-serif;
+    font-family: "DM sans", "Cabin Sketch", system-ui, sans-serif;
     margin: 0;
     padding: 0;
   }
