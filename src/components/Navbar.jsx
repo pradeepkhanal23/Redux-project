@@ -1,5 +1,7 @@
 import { SiRedux } from "react-icons/si";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,7 +11,14 @@ const Navbar = () => {
           <p className="hidden text-lg font-bold md:block">Store-X</p>
           <SiRedux className="scale-[1.7] " />
         </div>
-
+        <div className="flex items-center gap-4">
+          <Link to="/products" className="text-lg">
+            Products
+          </Link>
+          <Link to="/cart" className="text-lg">
+            Cart
+          </Link>
+        </div>
         <div className="flex items-center gap-2">
           <AiOutlineShoppingCart className="relative scale-[2]" />
           <div className="absolute flex items-center justify-center w-5 h-5 p-2 font-bold bg-white rounded-full right-5 top-2 text-primary">
@@ -17,6 +26,7 @@ const Navbar = () => {
           </div>
         </div>
       </header>
+      <Outlet />
     </nav>
   );
 };

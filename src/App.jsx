@@ -1,15 +1,37 @@
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Cart from "./components/Product";
+import ErrorPage from "./components/ErrorPage";
+
 import Products from "./components/Products";
-import Modal from "./components/Modal";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayout from "./components/RootLayout";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <Products />,
+      },
+      {
+        path: "products",
+        element: <Products />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
   return (
     <main className="w-full h-full overflow-x-hidden bg-gray-50">
-      <Navbar />
-      <Products />
-      <Footer />
-      <Modal />
+      <RouterProvider router={router} />
     </main>
   );
 };
