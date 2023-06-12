@@ -5,12 +5,17 @@
 @layer base {
   html {
     font-family: "Sen", "Cabin Sketch", "Poppins", system-ui, sans-serif;
-    scroll-behavoir: smooth;
+    margin: 0;
+    padding: 0;
   }
 }
 
 @layer components {
   .btn {
     @apply px-6 text-white bg-purple-600 rounded-md;
+  }
+
+  .modal {
+    @apply fixed inset-0 items-center justify-center bg-black opacity-80;
   }
 }

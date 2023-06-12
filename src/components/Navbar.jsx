@@ -3,20 +3,20 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className=" flex items-center justify-between w-full px-10 py-2 text-white bg-[#764abc]">
-        <header className="flex items-center gap-2">
-          <p className="hidden md:block">Store-X</p>
-          <SiRedux className="text-base" />
-        </header>
-
-        <div className="flex items-center gap-1">
-          <AiOutlineShoppingCart className="text-base" />
-          <div className="flex items-center justify-center w-5 h-5 bg-white rounded-full">
-            <p className="font-bold text-purple-700">1</p>
+    <nav className="w-full">
+      <header className="flex items-center justify-between px-10 py-4 text-white bg-primary">
+        <div className="flex items-center justify-center gap-4">
+          <p className="hidden text-lg md:block">Store-X</p>
+          <SiRedux className="scale-[1.7] " />
+        </div>
+        <h1 className="text-base uppercase">Cart Items</h1>
+        <div className="flex items-center gap-2">
+          <AiOutlineShoppingCart className="relative scale-[2]" />
+          <div className="absolute flex items-center justify-center w-5 h-5 p-2 font-bold bg-white rounded-full right-5 top-2 text-primary">
+            <p>1</p>
           </div>
         </div>
-      </div>
+      </header>
     </nav>
   );
 };
