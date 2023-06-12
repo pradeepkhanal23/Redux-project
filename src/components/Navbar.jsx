@@ -4,9 +4,9 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 const Navbar = () => {
   return (
     <nav className="w-full">
-      <header className="flex items-center justify-between px-10 py-3 text-white bg-primary">
+      <header className="flex items-center justify-between px-10 py-5 text-white bg-primary md:py-3">
         <div className="flex items-center justify-center gap-4">
-          <p className="hidden text-lg md:block">Store-X</p>
+          <p className="hidden text-lg font-bold md:block">Store-X</p>
           <SiRedux className="scale-[1.7] " />
         </div>
 
