@@ -1,38 +1,16 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import Product from "./Product";
+import Product from "./Product.jsx";
+import useFetch from "./useFetch.jsx";
 
-const url = "https://fakestoreapi.com/products?limit=5";
+const url = "https://dummyjson.com/products?limit=5";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-
-  async function getProducts() {
-    try {
-      const response = await axios.get(url);
-
-      setProducts(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    getProducts();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url]);
+  const { data } = useFetch(url);
 
   return (
-    <section className="grid items-center w-full grid-cols-1 gap-10 p-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {products.length ? (
-        <>
-          {products.map((product) => {
-            return <Product key={product.id} {...product} />;
-          })}
-        </>
-      ) : (
-        <h1>Loading...</h1>
-      )}
+    <section className="flex flex-wrap justify-around w-full gap-3 p-3 mx-auto">
+      {data.map((product) => (
+        <Product key={product.id} {...product} />
+      ))}
     </section>
   );
 };

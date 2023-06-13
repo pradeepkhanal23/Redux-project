@@ -1,6 +1,5 @@
-import Cart from "./components/Product";
+import Cart from "./components/Cart";
 import ErrorPage from "./components/ErrorPage";
-
 import Products from "./components/Products";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
