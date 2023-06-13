@@ -8,8 +8,8 @@ const Products = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen text-4xl">
-        <h1 className="text-primary">Loading...</h1>
+      <div className="flex items-center justify-center min-h-screen text-2xl">
+        <h1 className="text-primary">Loading Cart Items.....</h1>
       </div>
     );
   }
@@ -22,7 +22,7 @@ const Products = () => {
   }
 
   return (
-    <section className="flex flex-wrap justify-around w-full gap-3 p-3 mx-auto">
+    <section className="flex flex-wrap justify-around w-full gap-3 p-3 mx-auto my-10">
       {data.map((product) => (
         <Product key={product.id} {...product} />
       ))}

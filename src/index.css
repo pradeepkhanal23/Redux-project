@@ -5,14 +5,16 @@
 @layer base {
   html {
     font-family: "DM sans", "Cabin Sketch", system-ui, sans-serif;
-    margin: 0;
-    padding: 0;
   }
 }
 
 @layer components {
   .btn {
     @apply px-6 text-white bg-purple-600 rounded-md;
+  }
+
+  .active {
+    @apply px-5 text-lg font-medium tracking-wide bg-white rounded-lg text-primary;
   }
 
   .modal {
