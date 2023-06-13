@@ -1,20 +1,21 @@
 /* eslint-disable react/prop-types */
 import defaultImage from "../assets/3.jpg";
 const Product = (product) => {
-  const { price, title, images } = product;
-  const imageSrc = images?.find(Boolean) || defaultImage;
+  const { price, title, image } = product;
 
   return (
-    <div className=" flex max-h-[500px] w-[380px] flex-col items-center  justify-center overflow-hidden rounded shadow-my_shadow">
+    <div className=" flex h-auto w-[380px] flex-col items-center  justify-center overflow-hidden rounded shadow-my_shadow">
       <div className="flex h-[330px] w-[380px] items-center justify-center rounded-lg">
         <img
           className="object-cover w-full h-full p-3 "
-          src={imageSrc}
+          src={image || defaultImage}
           alt={title}
         />
       </div>
       <div className="flex flex-col items-center ">
-        <div className="mb-1 font-bold text-rose-950">{title}</div>
+        <div className="px-2 mb-1 font-bold text-center text-rose-950">
+          {title}
+        </div>
 
         <p className="text-gray-700 ">${price}</p>
       </div>
