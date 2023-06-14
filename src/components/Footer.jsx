@@ -1,4 +1,9 @@
+import { useDispatch } from "react-redux";
+import { openModal } from "../features/modal/modalSlice";
+
 const Footer = () => {
+  const dispatch = useDispatch();
+
   return (
     <footer className="w-full h-auto p-3 mb-8">
       <hr className="bg-primary" />
@@ -8,7 +13,10 @@ const Footer = () => {
           <span className="tracking-wider text-green-600">$1234</span>
         </div>
         <div>
-          <button className="px-6 py-1 text-base text-white bg-red-500 rounded-md">
+          <button
+            className="px-6 py-1 text-base text-white bg-red-500 rounded-md"
+            onClick={() => dispatch(openModal())}
+          >
             Clear All
           </button>
         </div>

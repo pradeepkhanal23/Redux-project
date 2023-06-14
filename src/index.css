@@ -18,6 +18,6 @@
   }
 
   .modal {
-    @apply fixed inset-0 items-center justify-center bg-black opacity-80;
+    @apply fixed inset-0 items-center justify-center bg-black opacity-100;
   }
 }

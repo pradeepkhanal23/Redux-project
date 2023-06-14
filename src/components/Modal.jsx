@@ -1,6 +1,15 @@
+import { useSelector, useDispatch } from "react-redux";
+import { clearCart } from "../features/cart/cartSlice";
+import { closeModal } from "../features/modal/modalSlice";
+
 const Modal = () => {
+  const { isOpen } = useSelector((state) => state.modal);
+
+
+  const dispatch=useDispatch();
+
   return (
-    <div className="hidden modal ">
+    <div className={isOpen === true ? "modal flex" : "modal hidden"}>
       <div className="h-48 bg-white w-96 ">
         <h1 className="mt-8 text-lg text-center">
           Remove All Items from the cart?

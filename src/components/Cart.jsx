@@ -4,9 +4,7 @@ import Footer from "./Footer";
 import { useSelector } from "react-redux";
 
 const Cart = () => {
-  const { cartItems, amount, total, description } = useSelector(
-    (state) => state.cart
-  );
+  const { cartItems, amount } = useSelector((state) => state.cart);
 
   if (amount < 1) {
     return (
