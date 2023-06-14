@@ -5,8 +5,7 @@ import { closeModal } from "../features/modal/modalSlice";
 const Modal = () => {
   const { isOpen } = useSelector((state) => state.modal);
 
-
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
   return (
     <div className={isOpen === true ? "modal flex" : "modal hidden"}>
@@ -15,10 +14,21 @@ const Modal = () => {
           Remove All Items from the cart?
         </h1>
         <div className="flex items-center justify-around w-full px-5 mx-auto my-8 rounded-lg">
-          <button className="px-8 py-1 font-bold uppercase border-2 border-primary text-primary shadow-my_shadow">
+          <button
+            className="px-8 py-1 font-bold uppercase border-2 border-primary text-primary shadow-my_shadow"
+            onClick={() => {
+              dispatch(closeModal());
+              dispatch(clearCart());
+            }}
+          >
             Confirm
           </button>
-          <button className="px-8 py-1 font-bold text-red-500 uppercase border-2 border-red-500 shadow-my_shadow">
+          <button
+            className="px-8 py-1 font-bold text-red-500 uppercase border-2 border-red-500 shadow-my_shadow"
+            onClick={() => {
+              dispatch(closeModal());
+            }}
+          >
             Cancel
           </button>
         </div>
