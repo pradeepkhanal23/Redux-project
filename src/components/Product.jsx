@@ -26,7 +26,9 @@ const Product = (product) => {
         <div className="flex items-center justify-center px-6 py-4">
           <button
             className="px-4 py-2 font-bold text-white rounded bg-primary"
-            onClick={() => dispatch(addToCart(product))}
+            onClick={() => {
+              dispatch(addToCart(product));
+            }}
           >
             Add to Cart
           </button>

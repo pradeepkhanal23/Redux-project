@@ -1,19 +1,27 @@
 import Product from "./Product.jsx";
-import useFetch from "./useFetch.jsx";
-
-const url = "https://fakestoreapi.com/products?limit=10";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchProducts } from "../features/products/productSlice.jsx";
+import { STATUS_CODES } from "../features/products/productSlice.jsx";
 
 const Products = () => {
-  const { data, loading, error } = useFetch(url);
+  const { status, data } = useSelector((state) => state.product);
 
-  if (loading) {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (status === STATUS_CODES.LOADING) {
     return (
       <div className="flex items-center justify-center min-h-screen text-2xl">
         <h1 className="text-primary">Loading Cart Items.....</h1>
       </div>
     );
   }
-  if (error) {
+  if (status === STATUS_CODES.ERROR) {
     return (
       <div className="flex items-center justify-center min-h-screen text-4xl">
         <h1 className="text-red-500">Oops!!! Something went wrong</h1>

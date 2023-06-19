@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cartSlice from "./features/cart/cartSlice.jsx";
-import modalSlice from "./features/modal/modalSlice.jsx";
+import cartReducer from "./features/cart/cartSlice.jsx";
+import modalReducer from "./features/modal/modalSlice.jsx";
+import productReducer from "./features/products/productSlice.jsx";
 
 export const store = configureStore({
   reducer: {
-    cart: cartSlice,
-    modal: modalSlice,
+    cart: cartReducer,
+    modal: modalReducer,
+    product: productReducer,
   },
 });

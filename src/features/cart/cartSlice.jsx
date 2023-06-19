@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   cartItems: [],
   amount: 0,
-  total: 0,
-  defaultAmount: 1,
+  // total: 0,
+  // defaultAmount: 1,
 };
 
 const cartSlice = createSlice({
@@ -26,6 +26,23 @@ const cartSlice = createSlice({
       );
       state.amount -= 1;
     },
+    // increase(state, { payload }) {
+    //   const selectedItem = state.cartItems.find((item) => {
+    //     state.defaultAmount += 1;
+    //     return item.id === payload.id;
+    //   });
+    //   state.defaultAmount += selectedItem.price / selectedItem.price;
+    // },
+    // calculateTotal(state) {
+    //   let amount = 1;
+    //   let total = 0;
+    //   state.cartItems.forEach((item) => {
+    //     amount += item.amount;
+    //     total += item.amount * item.price;
+    //   });
+    //   state.amount = amount;
+    //   state.total = total;
+    // },
   },
 });
 
