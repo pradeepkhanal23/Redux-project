@@ -17,6 +17,7 @@ const Product = (product) => {
             alt={title}
           />
         </div>
+
         <div className="flex flex-col items-center ">
           <div className="px-2 mb-1 font-bold text-center text-rose-950">
             {title}
