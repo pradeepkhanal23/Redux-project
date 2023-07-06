@@ -44,6 +44,7 @@ _Screenshot of the homepage showcasing product listings and cart functionality._
 _Screenshot of the cart component showcasing product details._
 
 ![Modal](./src/assets/modal.png)
+
 _Screenshot of the modal component displaying actions to be dispatched._
 
 ## Acknowledgements
