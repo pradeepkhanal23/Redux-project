@@ -61,4 +61,4 @@ This simple Redux project highlights my ability to effectively use Redux for sta
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to modify and adapt it to suit your needs.
+This project is licensed under the [MIT License](LICENSE).
